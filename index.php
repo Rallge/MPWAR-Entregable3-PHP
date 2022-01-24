@@ -31,15 +31,15 @@ var_dump($filtroEmail);
 
 
 echo "Filtrar usuarios por telefono".PHP_EOL;
-$filtroPhone = $colausers->findByPhone(); // Filtrar por phone 672389896
+$filtroPhone = $user->findByPhone(); // Filtrar por phone 672389896
 var_dump($filtroPhone);
 
 
 echo "Filtrar usuarios por telefono";
-$filtroCity = $colausers->findByCity(); // Filtrar por city Barcelona
+$filtroCity = $user->findByCity(); // Filtrar por city Barcelona
 var_dump($filtroCity);
 
 
 echo "Filtrar usuarios por Gender";
-$filtroGender = $colausers->findByGender(); // Filtrar por city Barcelona
+$filtroGender = $user->findByGender(); // Filtrar por city Barcelona
 var_dump($filtroGender);
