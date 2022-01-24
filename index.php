@@ -6,31 +6,31 @@ ini_set("display_errors", "on");
 include_once __DIR__ . '/User.php';
 include_once __DIR__ . '/Users.php';
 
-echo "Se creo la clase Users para guardar los objetos de la clase User";
-$colausers = new Users();
-var_dump($colausers); //cola vacía
+echo "Se creo la clase Users para guardar los objetos de la clase User".PHP_EOL;
+$user = new Users();
+var_dump($user); //cola vacía
 
-echo "agrego 4 propiedades: geraldinelopz@gmail.com,672389896,Barcelona,Femenino e imprimo la cola y la cantidad de elementos";
-$colausers->add('geraldinelopz@gmail.com', 672389896,'Barcelona','Femenino');
+echo "agrego 4 propiedades: geraldinelopz@gmail.com,672389896,Barcelona,Femenino e imprimo la cola y la cantidad de elementos".PHP_EOL;
+$user->add('geraldinelopz@gmail.com,672389896,Barcelona,Femenino');
 
-var_dump($colausers); //muestra los 4 elementos
-var_dump($colausers->count()); // Prints 4
+var_dump($user); //muestra los 4 elementos
+var_dump($user->count()); // Prints 4
 
-echo "Devolver todos los usuarios guardados en la colección";
-$colausers->findAll();
+echo "Devolver todos los usuarios guardados en la colección".PHP_EOL;
+$user->findAll();
 
-var_dump($colausers->findAll()); //muestra los elementos
+var_dump($user->findAll()); //muestra los elementos
 
 
 //Filtros
 
 
-echo "Filtrar usuarios por correo electronico";
-$filtroEmail = $colausers->findByEmail(); // Filtrar por email geraldinelopz@gmail.com
+echo "Filtrar usuarios por correo electronico".PHP_EOL;
+$filtroEmail = $user->findByEmail(); // Filtrar por email geraldinelopz@gmail.com
 var_dump($filtroEmail);
 
 
-echo "Filtrar usuarios por telefono";
+echo "Filtrar usuarios por telefono".PHP_EOL;
 $filtroPhone = $colausers->findByPhone(); // Filtrar por phone 672389896
 var_dump($filtroPhone);
 

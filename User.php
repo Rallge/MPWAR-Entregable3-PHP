@@ -2,7 +2,7 @@
 
 class User
 {
- //Declaración de atributos
+ //Declaración de atributos o propiedades de la clase user
 
     public $email;
     public $phone;
